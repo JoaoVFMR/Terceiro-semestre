@@ -32,12 +32,12 @@ export class ProductsService {
 
   async update(id: number, updateProductDto: UpdateProductDto) {
     const product = await this.findOne(id);
-    this.productRepository.merge(product, updateProductDto)
-    return this.productRepository.save(product)
+    this.productRepository.merge(product, updateProductDto);
+    return this.productRepository.save(product);
   }
 
   async remove(id: number) {
-    const product = await this.findOne(id)
-    return this.productRepository.delete(product);
+    const product = await this.findOne(id);
+    return this.productRepository.remove(product);
   }
 }
