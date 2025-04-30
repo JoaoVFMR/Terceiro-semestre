@@ -17,10 +17,14 @@ export default function Posts(){
     return (
         <div>
             <h1>Lista de posts</h1>
-            <div className="grid grid-cols-3 gap-">
+            <div className="grid grid-cols-3 gap-5">
             {
                 posts.map((post) => (
-                    <div className="border-1 border-dotted border-red-600" key={post.id}>{post.title}</div>
+                    <div 
+                    className="border-1 border-dotted border-red-600" 
+                    key={post.id}>
+                        {post.title}
+                    </div>
                 ))
             }
             </div>
